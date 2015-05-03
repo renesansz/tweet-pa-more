@@ -1,0 +1,20 @@
+/**
+* .post styles
+*/
+.post {
+	
+	color: #FFF;
+	
+	padding: 10px;
+	
+	p {
+		font-size: 19px;
+	}
+	
+	&.odd {
+		background: $post-odd-bg-color;
+	}
+	&.even {
+		background: $post-even-bg-color;
+	}
+}

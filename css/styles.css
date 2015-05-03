@@ -1,0 +1,21 @@
+/**
+* General/Common Styles
+*/
+body {
+  margin-top: 20px; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+/**
+* .post styles
+*/
+.post {
+  color: #FFF;
+  padding: 10px; }
+  .post p {
+    font-size: 19px; }
+  .post.odd {
+    background: #434343; }
+  .post.even {
+    background: #29B5FA; }
