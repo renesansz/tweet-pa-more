@@ -1,7 +1,7 @@
 {
   "name": "tweet-pa-more",
   "version": "1.0.0",
-  "description": "Tweet pa more in Twitter",
+  "description": "A simple MEAN application with Twitter Integration",
   "author": "Renemari Padillo <padillo.renemari@gmail.com>",
   "license": "MIT"
 }
