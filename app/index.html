@@ -9,6 +9,7 @@
   
   <!-- Vendor Style(s) -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css"></link>
     
 </head>
@@ -16,18 +17,20 @@
   
   <div class="container" ng-controller="TweetController">
     
+    <h1>Tweet Pa More!</h1>
+
     <form class="form" ng-submit="PostTweet()">
       <div class="form-group">      
-        <input type="text" class="form-control" placeholder="Your Name" ng-model="newPost.created_by">
+        <input type="text" class="form-control" placeholder="Name" ng-model="newPost.created_by">
       </div>
       <div class="form-group">
         <textarea maxlength="200" cols="30" rows="5" class="form-control" placeholder="Say Something" ng-model="newPost.message"></textarea>
       </div>
-      <button class="btn btn-primary" type="submit">Tweet!</button>
+      <button class="btn btn-primary" type="submit"><i class="fa fa-send"></i> Tweet!</button>
     </form>
     
     <div id="post-stream">
-      <h4>Live Feed</h4>
+      <h4>Live Feed <i class="fa fa-rss"></i></h4>
       
       <!-- Display Feed -->
       <div class="post" ng-cloak
