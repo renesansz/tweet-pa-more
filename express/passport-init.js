@@ -10,17 +10,17 @@ module.exports = function (passport) {
 	 * Passport needs to be able to (de)serialize user to be used for session checking
 	 * */
 	passport.serializeUser(function (user, done) {
-				console.log('Serializing User: ' + user.username);
-				
-				return done(null, user.username);
-				
-			});
+		console.log('Serializing User: ' + user.username);
+		
+		return done(null, user.username);
+		
+	});
 			
 	passport.deserializeUser(function (username, done) {
 				
-				return done(null, users[username]);
-				
-			});
+		return done(null, users[username]);
+		
+	});
 			
 	/**
 	 * Passport Register Feature
