@@ -18,6 +18,9 @@
          */
         $scope.PostTweet = function () {
             
+            if ( ! $scope.newPost.message.length)
+                return;
+
             $scope.newPost.created_at = Date.now();
             $scope.posts.push($scope.newPost);
             
