@@ -1,3 +1,4 @@
 app/.sass-cache
 app/bower_components
 express/node_modules
+express/npm-debug.log
