@@ -1,50 +1,51 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" ng-app="tweet-pa-more">
 <head>
   <meta charset="UTF-8">
     
   <title>Tweet Pa More!</title>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   
   <!-- Vendor Style(s) -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/styles.css"></link>
+  <link rel="stylesheet" href="css/styles.css">
     
 </head>
 <body>
   
   <div class="container" ng-controller="PostController">
-    
-    <div id="new-post" class="col-sm-5">    
-      <h1>Tweet Pa More!</h1>
+      <div class="row">
+          <div id="new-post" class="col-sm-5">
+              <h1>Tweet Pa More!</h1>
 
-      <form class="form" ng-submit="PostTweet()">
-        <div class="form-group">      
-          <input type="text" class="form-control" placeholder="Name" ng-model="newPost.username" required>
-        </div>
-        <div class="form-group">
-          <textarea maxlength="200" cols="30" rows="5" class="form-control" placeholder="Say Something" ng-model="newPost.message" required></textarea>
-        </div>
-        <button class="btn btn-primary" ng-disabled="isSending" type="submit"><i class="fa fa-spinner fa-spin fa-pulse" ng-show="isSending"></i><i class="fa fa-send" ng-hide="isSending"></i> Tweet!</button>
-      </form>
-    </div>
-    <div class="col-sm-6"></div>
-    <div id="post-stream" class="col-sm-6">
-      <h4>Live Feed <i class="fa fa-rss"></i></h4>
-      
-      <!-- Display Feed -->
-      <div class="post" ng-cloak
-           ng-repeat="post in posts | orderBy: created_at"
-           ng-class="{ 'odd': $odd, 'even': $even }">
-        
-        <p>{{ post.message }}</p>
-        <small>Posted by {{ post.username }} <span class="pull-right">{{ post.created_at | date:'medium' }}</span></small>
-      
+              <form class="form" ng-submit="PostTweet()">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Name" ng-model="newPost.username" required>
+                  </div>
+                  <div class="form-group">
+                      <textarea maxlength="200" cols="30" rows="5" class="form-control" placeholder="Say Something" ng-model="newPost.message" required></textarea>
+                  </div>
+                  <button class="btn btn-primary" ng-disabled="isSending" type="submit"><i class="fa fa-spinner fa-spin fa-pulse" ng-show="isSending"></i><i class="fa fa-send" ng-hide="isSending"></i> Tweet!</button>
+              </form>
+          </div>
+          <div class="col-sm-6"></div>
+          <div id="post-stream" class="col-sm-6">
+              <h4>Live Feed <i class="fa fa-rss"></i></h4>
+
+              <!-- Display Feed -->
+              <div class="post" ng-cloak
+                   ng-repeat="post in posts | orderBy: created_at"
+                   ng-class="{ 'odd': $odd, 'even': $even }">
+
+                  <p>{{ post.message }}</p>
+                  <small>Posted by {{ post.username }} <span class="pull-right">{{ post.created_at | date:'medium' }}</span></small>
+
+              </div>
+
+          </div>
       </div>
-      
-    </div>
   </div>
 
   <!-- Vendor Script(s) -->
