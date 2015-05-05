@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var PostSchema = new mongoose.Schema({
     user_id: {
-        type: Number,
+        type: String,
         required: true
     },
     message: String,
