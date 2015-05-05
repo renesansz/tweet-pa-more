@@ -4,18 +4,23 @@
 body {
   margin-top: 20px; }
 
-[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
 /**
 * .post styles
 */
-.post {
-  color: #FFF;
+#post-stream {
+  background: #FBFBFB;
+  margin: 10px 0;
   padding: 10px; }
-  .post p {
-    font-size: 19px; }
-  .post.odd {
-    background: #434343; }
-  .post.even {
-    background: #29B5FA; }
+  #post-stream .post {
+    color: #FFF;
+    margin: 5px 0;
+    padding: 10px; }
+    #post-stream .post p {
+      font-size: 19px; }
+    #post-stream .post.odd {
+      background: #0281C0; }
+    #post-stream .post.even {
+      background: #29B5FA; }

@@ -35,7 +35,7 @@
       <!-- Display Feed -->
       <div class="post" ng-cloak
            ng-repeat="post in posts | orderBy: created_at"
-           ng-class="{ 'odd': $index % 2 !== 0, 'even': $index % 2 === 0 }">
+           ng-class="{ 'odd': $odd, 'even': $even }">
         
         <p>{{ post.message }}</p>
         <small>Posted by {{ post.created_by }} <span class="pull-right">{{ post.created_at | date:'medium' }}</span></small>
