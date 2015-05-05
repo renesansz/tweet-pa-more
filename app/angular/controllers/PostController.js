@@ -7,8 +7,9 @@
         
     function PostController($scope, PostsResource) {
 
-        $scope.posts = PostsResource.getList().$object;
+        $scope.isSending = false;
         $scope.newPost = { username: '', message: '', created_at: '' };
+        $scope.posts = PostsResource.getList().$object;
         
         // Function Definitions
         // ---------------------
@@ -21,7 +22,12 @@
             if ( ! $scope.newPost.message.length)
                 return;
 
+            $scope.isSending = true;
+
             PostsResource.post($scope.newPost).then(function() {
+
+                $scope.isSending = false;
+                $scope.posts.push($scope.newPost);
 
                 // Reset the scope data, so that we can re-use it again
                 $scope.newPost = {
@@ -29,7 +35,6 @@
                     message: '',
                     created_at: ''
                 };
-                $scope.posts = PostsResource.getList().$object;
                  
             });
         
