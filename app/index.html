@@ -15,13 +15,13 @@
 </head>
 <body>
   
-  <div class="container" ng-controller="TweetController">
+  <div class="container" ng-controller="PostController">
     
     <h1>Tweet Pa More!</h1>
 
     <form class="form" ng-submit="PostTweet()">
       <div class="form-group">      
-        <input type="text" class="form-control" placeholder="Name" ng-model="newPost.created_by">
+        <input type="text" class="form-control" placeholder="Name" ng-model="newPost.username">
       </div>
       <div class="form-group">
         <textarea maxlength="200" cols="30" rows="5" class="form-control" placeholder="Say Something" ng-model="newPost.message"></textarea>
@@ -38,7 +38,7 @@
            ng-class="{ 'odd': $odd, 'even': $even }">
         
         <p>{{ post.message }}</p>
-        <small>Posted by {{ post.created_by }} <span class="pull-right">{{ post.created_at | date:'medium' }}</span></small>
+        <small>Posted by {{ post.username }} <span class="pull-right">{{ post.created_at | date:'medium' }}</span></small>
       
       </div>
       
@@ -46,13 +46,19 @@
   </div>
 
   <!-- Vendor Script(s) -->
+  <script type="text/javascript" src="bower_components/lodash/lodash.min.js"></script>
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/restangular/dist/restangular.js"></script>
 
   <!-- Angular App -->
   <script type="text/javascript" src="angular/app.js"></script>
-  <script type="text/javascript" src="angular/controllers/app.controllers.js"></script>
+  <script type="text/javascript" src="angular/app.config.js"></script>
+  <!-- Angular App Resources -->
+  <script type="text/javascript" src="angular/resources/app.resources.js"></script>
+  <script type="text/javascript" src="angular/resources/posts.js"></script>
   <!-- Angular App Controllers -->
-  <script type="text/javascript" src="angular/controllers/TweetController.js"></script>
+  <script type="text/javascript" src="angular/controllers/app.controllers.js"></script>
+  <script type="text/javascript" src="angular/controllers/PostController.js"></script>
   
 </body>
 </html>
