@@ -3,16 +3,16 @@ A Twitter Like MEAN application
 
 ### How to use
 
-** Prerequisites **
+**Prerequisites**
 
 * Make sure you have [NodeJS](http://nodejs.org/) installed.
 * Make sure you have [MongoDB](https://www.mongodb.org/) installed.
 
-** Install dependencies **
+**Install dependencies**
 
 1. Open your command line in the root project folder then type `bower install`. Then wait for the process to finish.
 2. Then navigate your command line to `express` folder and do `npm install`. Then wait for the process to finish.
-3. Then make sure you have your ** Mongo DB ** server running, (Assuming that now you can call MongoDB binaries in your command line) you can do that by typing in `mongod`.
+3. Then make sure you have your**Mongo DB**server running, (Assuming that now you can call MongoDB binaries in your command line) you can do that by typing in `mongod`.
 4. Then run another command in `express` folder `node index.js`, this will run the Express Server.
 5. After that you simply navigate to `app` folder and open the index.html. Enjoy!
 
@@ -29,4 +29,4 @@ A Twitter Like MEAN application
 
 Feel free to modify and play with it.
 
-** Renemari Padillo ** &copy; 2015
+**Renemari Padillo** &copy; 2015
