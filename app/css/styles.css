@@ -10,6 +10,11 @@ body {
 /**
 * .post styles
 */
+@media screen and (min-width: 700px) {
+  #new-post {
+    position: fixed;
+    z-index: 999; } }
+
 #post-stream {
   background: #FBFBFB;
   margin: 10px 0;

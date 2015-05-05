@@ -1,6 +1,12 @@
 /**
 * .post styles
 */
+#new-post {
+	@media screen and (min-width: 700px) {
+		position: fixed;
+		z-index: 999;
+	}
+}
 #post-stream {
 	
 	background: #FBFBFB;
