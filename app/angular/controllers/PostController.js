@@ -10,14 +10,19 @@
         $scope.isSending = false;
         $scope.newPost = { username: '', message: '', created_at: '' };
         $scope.posts = PostsResource.getList().$object;
+
+        // Controller Functions
+        // ---------------------
         
+        $scope.PostTweet = PostTweet;
+
         // Function Definitions
         // ---------------------
         
         /**
          * Submits the tweet.
          */
-        $scope.PostTweet = function () {
+        function PostTweet() {
             
             if ( ! $scope.newPost.message.length)
                 return;
