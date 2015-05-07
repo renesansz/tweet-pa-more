@@ -12,7 +12,7 @@ module.exports = function (passport) {
               failureRedirect: '/api/v1/auth/register/failure'
           }))
           .get('/login/success', function (req, res, next) {})
-          .get('/login/failure', function (req, res, next) {}
+          .get('/login/failure', function (req, res, next) {})
           .get('/register/success', function (req, res, next) {})
           .get('/register/failure', function (req, res, next) {});
 
