@@ -18,7 +18,7 @@
 
     function PostsResource(PostsRestangular) {
 
-        return PostsRestangular.service('posts');
+        return PostsRestangular.service('api/v1/posts');
 
     }
 
