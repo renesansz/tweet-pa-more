@@ -7,7 +7,8 @@
             // NG_PATH - Angular Directories
            .constant('NG_PATH', {
 
-                MODULES: 'angular/modules/'
+                DIRECTIVES: 'angular/directives/',
+                MODULES: 'angular/modules/',
 
            });
 
