@@ -10,6 +10,7 @@
         var sharedData = {};
         var vm = this;
             vm.Set = Set;
+            vm.Get = Get;
 
         // SERVICE METHODS
         // ----------------
