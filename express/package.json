@@ -1,9 +1,12 @@
 {
   "name": "tweet-pa-more",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Twitter Like MEAN application",
   "main": "index.js",
   "author": "Renemari Padillo <padillo.renemari@gmail.com>",
+  "scripts": {
+    "start": "node index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
