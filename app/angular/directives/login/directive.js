@@ -24,6 +24,10 @@
              * Scope Directives
              */
             $scope.Login = Login;
+            $scope.credentials = {
+                username: '',
+                password: ''
+            };
 
             /**
              * Show Login Modal
