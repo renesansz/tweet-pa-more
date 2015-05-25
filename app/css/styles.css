@@ -29,3 +29,8 @@ body {
       background: #0281C0; }
     #post-stream .post.even {
       background: #29B5FA; }
+
+#login-modal {
+  display: none; }
+
+/*# sourceMappingURL=styles.css.map */

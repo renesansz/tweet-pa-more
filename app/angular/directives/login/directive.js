@@ -3,9 +3,9 @@
     'use strict';
 
     angular.module('tweet-pa-more.directives')
-           .directive('login-form', Directive);
+           .directive('loginform', LoginForm);
 
-    function Directive(NG_PATH) {
+    function LoginForm(NG_PATH) {
 
         var directive = {
             restrict: 'E',

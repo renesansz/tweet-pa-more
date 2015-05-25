@@ -15,11 +15,11 @@
               <textarea maxlength="200" cols="30" rows="5" class="form-control" placeholder="Say Something" ng-model="home.newPost.message" required="" ></textarea>
           </div>
           
-          <button class="btn btn-primary" ng-disabled="home.isSending" type="submit">
+          <button class="btn btn-success" ng-disabled="home.isSending" type="submit">
             <i class="fa fa-spinner fa-spin fa-pulse" ng-show="home.isSending"></i>
             <i class="fa fa-send" ng-hide="home.isSending"></i> Tweet!
           </button>
-          <a class="btn btn-success"><i class="fa fa-user"></i> Login</a>
+          <loginform></loginform>
       </form>
     </div>
 
