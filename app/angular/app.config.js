@@ -1,3 +1,7 @@
+/**
+ * Angular App Config
+ * ------------------
+ */
 (function () {
 
     'use strict';
@@ -5,14 +9,19 @@
     angular.module('tweet-pa-more')
            .config(AppConfig);
 
-    function AppConfig($stateProvider, $urlRouterProvider, RestangularProvider, NG_PATH) {
+    function AppConfig($stateProvider, $urlRouterProvider, RestangularProvider, NG_PATH, API) {
         
-        // Restangular base URL
-        // --------------------
-        RestangularProvider.setBaseUrl('http://localhost:3000');
+        /**
+         * Restangular base URL
+         * ------------------
+         */
+        RestangularProvider.setBaseUrl(API.REST_URL);
 
-        // App Routes
-        // -----------
+        /**
+         * App Routes
+         * ----------
+         * Set the application routes available in the app.
+         */
         var routes = [
 
             // Home Route

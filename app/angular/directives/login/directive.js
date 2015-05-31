@@ -6,36 +6,51 @@
            .directive('loginform', LoginForm);
 
     function LoginForm(NG_PATH) {
-
+        
+        // Directive Instance
+        // ------------------
         var directive = {
             restrict: 'E',
             link: _Link,
             templateUrl: NG_PATH.DIRECTIVES + 'login/template.html'
         };
 
-        return directive;
-
         /**
-         * Directive Controller
+         * @access private
+         * @function Link
+         * 
+         * Directive Controller.
+         *
+         * @param {Object} $scope  - Angular $scope object
          */
-        function _Link($scope, element, attrs) {
+        function _Link($scope) {
 
-            /**
-             * Scope Directives
-             */
+            /////////////////////
+            // Scope Variables //
+            /////////////////////
+            
             $scope.Login = Login;
             $scope.credentials = {
                 username: '',
                 password: ''
             };
 
+            //////////////////////////
+            // Function Definitions //
+            //////////////////////////
+
             /**
-             * Show Login Modal
+             * @access public
+             * @function Login
+             * 
+             * Show Login Modal.
              */
             function Login() {
             }
 
         } 
+
+        return directive;
 
     }
 

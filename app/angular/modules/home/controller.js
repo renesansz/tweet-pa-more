@@ -8,19 +8,29 @@
     function HomeController(PostsResource) {
 
         var vm = this;
+
+        /////////////////////
+        // Scope Variables //
+        /////////////////////
+
             vm.isSending = false;
             vm.newPost = { username: '', message: '', created_at: '' };
             vm.posts = PostsResource.getList().$object;
 
-        // Controller Functions
-        // ---------------------
+        /////////////////////
+        // Scope Functions //     
+        /////////////////////
         
         vm.PostTweet = PostTweet;
 
-        // Function Definitions
-        // ---------------------
+        //////////////////////////
+        // Function Definitions //
+        //////////////////////////
         
         /**
+         * @access public
+         * @function PostTweet
+         * 
          * Submits the tweet.
          */
         function PostTweet() {

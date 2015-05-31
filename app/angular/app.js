@@ -1,3 +1,7 @@
+/**
+ * Angular App Bootstrap
+ * ---------------------
+ */
 (function () {
 
     'use strict';

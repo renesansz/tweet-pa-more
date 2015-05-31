@@ -9,17 +9,26 @@
 
         var sharedData = {};
         var vm = this;
+
+        /////////////////////
+        // Scope Functions //     
+        /////////////////////
+
             vm.Set = Set;
             vm.Get = Get;
 
-        // SERVICE METHODS
-        // ----------------
+        //////////////////////////
+        // Function Definitions //
+        //////////////////////////
 
         /**
+         * @access Public
+         * @function Set
+         * 
          * Set a shareable data.
          * 
          * @param {String} key - The key name for the shared data.
-         * @param {Any} val - The value to be set.
+         * @param {Any}    val - The value to be set.
          *
          * @return {Any} - The value being set
          */
@@ -32,6 +41,9 @@
         }
 
         /**
+         * @access Public
+         * @function Get
+         * 
          * Get the value of the shared data by its key.
          * 
          * @param {String} key - The key name for the shared data.
