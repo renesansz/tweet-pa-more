@@ -14,7 +14,7 @@
         /////////////////////
 
             vm.isSending = false;
-            vm.newPost = { username: '', message: '', created_at: '' };
+            vm.newPost = {username: '', message: '', created_at: ''};
             vm.posts = PostsResource.getList().$object;
 
         /////////////////////
